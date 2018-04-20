@@ -1,4 +1,5 @@
 #include <iostream>
+//#define SDL_MAIN_HANDLED
 #include "SDL.h"
 
 const unsigned int WINDOW_WIDTH = 800;
