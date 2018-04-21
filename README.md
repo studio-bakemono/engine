@@ -15,6 +15,7 @@ followed by two bytes
 - *arg1=*arg1-*arg2
 = *arg1=*arg2
 & *arg1=arg2
+. *arg1=arg1+arg2
 ```
 ### Editing Code
 A dual view, shows 
