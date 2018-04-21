@@ -2,6 +2,7 @@
 #include <SDL.h>
 #include "EntityManager.h"
 #include "Entity.h"
+#include <string>
 
 //#include "TextureManager.h"
 
@@ -15,6 +16,9 @@ public:
 	SDL_Surface* screenSurface = nullptr;
 	SDL_Renderer* renderer = nullptr;
 
+	SDL_Surface* nene = nullptr;
+	SDL_Texture* nene_tex = nullptr;
+	
 	//Event handler
 	SDL_Event e;
 	
