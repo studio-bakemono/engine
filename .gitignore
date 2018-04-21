@@ -1,2 +1,14 @@
 build*
 cmake*
+*.dll
+*.sln
+.vs/
+ALL_BUILD.vcxproj
+ALL_BUILD.vcxproj.filters
+Debug
+ZERO_CHECK.vcxproj
+ZERO_CHECK.vcxproj.filters
+sbs.dir
+sbs.vcxproj
+sbs.vcxproj.filters
+x64
