@@ -8,14 +8,6 @@ class EntityManager
 {
 public:
 
-	std::vector<Entity*>Entities;
-
-	
-	void cleanup()
-	{
-		for (auto e : Entities)
-			delete e;
-	}
 
 	EntityManager();
 	~EntityManager();

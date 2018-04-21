@@ -23,17 +23,9 @@ public:
 
 	std::string u_tag;
 
-
-	void test()
-	{
-	}
-
-
 	void cleanup();
 
 	Entity();
-
-
 
 
 

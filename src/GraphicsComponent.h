@@ -9,12 +9,12 @@ public:
 	SDL_Surface tex;
 	SDL_Rect size;
 
-	void cleanup();
-
 	void update(SDL_Renderer* renderer) 
 	{
 		
 	}
+	
+	void cleanup();
 
 	GraphicsComponent();
 	~GraphicsComponent();

@@ -1,6 +1,4 @@
-#include "stdafx.h"
 #include "App.h"
-
 
 App::App()
 {
@@ -39,24 +37,8 @@ bool App::startup()
 // THIS IS THE LOAD FUNCTION IT LOADS SHIT  *BLOWS MIND*
 void App::Load()
 {
-
-	texture_manager = new TextureManager(*renderer);
-
-	test_surf = SDL_LoadBMP("test.bmp");
-
-	test_map = map();
-
-	test_tex = nullptr;
-	test_tex = SDL_CreateTextureFromSurface( renderer, test_surf );
-
-	//texture_manager->textures[0] = test_tex;
-
-
-	test_rect = new SDL_Rect{32,32,32,32};
-
-
-	test_map.load(renderer);
-
+	//LOAD RESOURCES HERE
+	
 
 }
 
@@ -95,8 +77,6 @@ void App::Update()
 		}
 
 		SDL_Delay(1 / FRAMERATE);
-
-
 	}
 
 
@@ -116,11 +96,11 @@ void App::Update()
 void App::Render()
 {
 	SDL_RenderClear(renderer);
-	SDL_RenderCopy(renderer, test_tex, NULL, test_rect);
-	//SDL_BlitSurface(test_surf, NULL, screenSurface, NULL);
+	//	CLEAR SCREEN AND RENDER STUFF DOWN HERE
+
 	
-	test_map.render(renderer);
 	
+		//STOP RENDERING SUTFF HERE	
 	SDL_RenderPresent(renderer);
 	SDL_Delay(1/60);
 }
@@ -139,18 +119,6 @@ void App::run()
 
 void App::cleanup()
 {
-	//delete texture_manager;
-
-	entity_manager.cleanup();
-
-
-	test_map.cleanup();
-
-
-	SDL_DestroyTexture(test_tex);
-	test_tex = nullptr;
-
-	//SDL_Delay(3000);
 
 
 	SDL_FreeSurface(screenSurface);
@@ -158,7 +126,6 @@ void App::cleanup()
 
 	SDL_DestroyWindow(window);
 	window = nullptr;
-
 
 
 	SDL_DestroyRenderer(renderer);
