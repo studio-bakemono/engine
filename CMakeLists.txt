@@ -24,5 +24,6 @@ set(SDL2_SEARCH ${CMAKE_CURRENT_SOURCE_DIR}/../sdl2/)
 
 find_package (SDL2 REQUIRED)
 find_package (SDL2_image REQUIRED)
-target_include_directories (sbs PUBLIC ${SDL2_INCLUDE_DIR} ${SDL2_IMAGE_INCLUDE_DIRS})
-target_link_libraries(sbs ${SDL2_LIBRARY} ${SDL2_IMAGE_LIBRARIES})
+find_package (SDL2_mixer REQUIRED)
+target_include_directories (sbs PUBLIC ${SDL2_INCLUDE_DIR} ${SDL2_IMAGE_INCLUDE_DIRS} ${SDL2_MIXER_INCLUDE_DIRS})
+target_link_libraries(sbs ${SDL2_LIBRARY} ${SDL2_MIXER_LIBRARIES})
